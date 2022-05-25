@@ -11,6 +11,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
+using Ecom_Onboarding.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+
+
 
 namespace Ecom_Onboarding
 {
@@ -26,11 +31,19 @@ namespace Ecom_Onboarding
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+
+
             services.AddControllers();
+
+            services.AddDbContext<OnBoardingSkdDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Tutorial Net Core", Version = "v1" });
             });
+            services.AddScoped<UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +53,7 @@ namespace Ecom_Onboarding
             {
                 app.UseDeveloperExceptionPage();
             }
+
 
             app.UseHttpsRedirection();
 

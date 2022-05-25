@@ -1,10 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Ecom_Onboarding.DTO;
+using Ecom_Onboarding.Models;
 
 namespace Ecom_Onboarding.Controllers
 {
@@ -12,13 +16,16 @@ namespace Ecom_Onboarding.Controllers
     [Route("[controller]")]
     public class GameController : ControllerBase
     {
-        private static Dictionary<int, GameDTO> gameDict = new Dictionary<int, GameDTO>();
+        private UnitOfWork _unitOfWork;
+        private IMapper _mapper;
 
         private readonly ILogger<GameController> _logger;
 
-        public GameController(ILogger<GameController> logger)
+        public GameController(ILogger<GameController> logger, UnitOfWork unitOfWork, IMapper mapper)
         {
             _logger = logger;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         /// <summary>
@@ -29,27 +36,29 @@ namespace Ecom_Onboarding.Controllers
         [Route("")]
         [ProducesResponseType(typeof(List<GameDTO>), 200)]
         [ProducesResponseType(typeof(string), 400)]
-        public ActionResult GetAll()
+        public async Task<ActionResult> GetAllAsync()
         {
-            return new OkObjectResult(gameDict.Values.ToList());
+            var result = await _unitOfWork.GameRepository.GetAll().ProjectTo<GameDTO>(_mapper.ConfigurationProvider).ToListAsync();
+            return new OkObjectResult(result);
         }
 
         /// <summary>
         /// Get game by id
         /// </summary>
-        /// <param id="Id">user Model.</param>
+        /// <param Name="Name">user Model.</param>
         /// <response code="200">Request ok.</response>
         /// <response code="405">Request not found.</response>
         [HttpGet]
-        [Route("{Id}")]
+        [Route("{Name}")]
         [ProducesResponseType(typeof(GameDTO), 200)]
         [ProducesResponseType(typeof(string), 400)]
-        public ActionResult GetByTitle([FromRoute] int Id)
+        public async Task<ActionResult> GetByTitleAsync([FromRoute] string Name)
         {
-            var game = gameDict.GetValueOrDefault(Id, null);
+            var game = await _unitOfWork.GameRepository.GetAll().Where(b => b.Name == Name).FirstOrDefaultAsync();
             if (game != null)
             {
-                return new OkObjectResult(game);
+                var gameDTO = _mapper.Map<GameDTO>(game);
+                return new OkObjectResult(gameDTO);
             }
             return new NotFoundResult();
         }
@@ -62,12 +71,16 @@ namespace Ecom_Onboarding.Controllers
         /// <response code="400">Request failed because of an exception.</response>
         [HttpPost]
         [Route("")]
-        [ProducesResponseType(typeof(GameDTO), 200)]
+        [ProducesResponseType(typeof(string), 200)]
         [ProducesResponseType(typeof(string), 400)]
-        public ActionResult Create([FromBody] GameDTO game)
+        public async Task<ActionResult> CreateAsync([FromBody] GameDTO gameDTO)
         {
-            if (gameDict.TryAdd(game.Id, game))
+            var isExist = _unitOfWork.GameRepository.GetAll().Where(x => x.Name == gameDTO.Name).Any();
+            if (!isExist)
             {
+                var game = _mapper.Map<Game>(gameDTO);
+                await _unitOfWork.GameRepository.AddAsync(game);
+                await _unitOfWork.SaveAsync();
                 return new OkResult();
             }
             return new BadRequestResult();
@@ -76,14 +89,14 @@ namespace Ecom_Onboarding.Controllers
         /// <summary>
         /// Create game 
         /// </summary>
-        /// <param id="Id">game data.</param>
+        /// <param Name="Name">game data.</param>
         /// <response code="200">Request ok.</response>
         [HttpDelete]
-        [Route("{Id}")]
+        [Route("{Name}")]
         [ProducesResponseType(typeof(GameDTO), 200)]
-        public ActionResult Delete([FromRoute] int Id)
+        public ActionResult Delete([FromRoute] string Name)
         {
-            gameDict.Remove(Id);
+            _unitOfWork.GameRepository.Delete(x => x.Name == Name);
             return new OkResult();
         }
     }
