@@ -11,7 +11,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
-using Ecom_Onboarding.Models;
+using Ecom_Onboarding.DAL.Interface;
+using Ecom_Onboarding.DAL.Repository;
+using Ecom_Onboarding.DAL.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -43,7 +45,7 @@ namespace Ecom_Onboarding
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Tutorial Net Core", Version = "v1" });
             });
-            services.AddScoped<UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

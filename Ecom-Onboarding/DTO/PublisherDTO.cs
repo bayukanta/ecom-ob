@@ -1,4 +1,4 @@
-﻿using Ecom_Onboarding.Models;
+﻿using Ecom_Onboarding.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

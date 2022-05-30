@@ -8,7 +8,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Ecom_Onboarding.DTO;
-using Ecom_Onboarding.Models;
+using Ecom_Onboarding.BLL.Services;
+using Ecom_Onboarding.DAL.Models;
+using Ecom_Onboarding.DAL.Interface;
+using Ecom_Onboarding.DAL.Repository;
+using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
+using Model = Ecom_Onboarding.DAL.Models;
 
 namespace Ecom_Onboarding.Controllers
 {
@@ -16,16 +21,16 @@ namespace Ecom_Onboarding.Controllers
     [Route("[controller]")]
     public class GameController : ControllerBase
     {
-        private UnitOfWork _unitOfWork;
+        private readonly GameService _gameService;
         private IMapper _mapper;
-
         private readonly ILogger<GameController> _logger;
 
-        public GameController(ILogger<GameController> logger, UnitOfWork unitOfWork, IMapper mapper)
+
+        public GameController(ILogger<GameController> logger, IUnitOfWork uow, IConfiguration configuration, IMapper mapper)
         {
             _logger = logger;
-            _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _gameService ??= new GameService(uow, configuration);
         }
 
         /// <summary>
@@ -38,8 +43,10 @@ namespace Ecom_Onboarding.Controllers
         [ProducesResponseType(typeof(string), 400)]
         public async Task<ActionResult> GetAllAsync()
         {
-            var result = await _unitOfWork.GameRepository.GetAll().ProjectTo<GameDTO>(_mapper.ConfigurationProvider).ToListAsync();
-            return new OkObjectResult(result);
+
+            List<Game> result = await _gameService.GetAllGameAsync();
+            List<GameDTO> mappedResult = _mapper.Map<List<GameDTO>>(result);
+            return new OkObjectResult(mappedResult);
         }
 
         /// <summary>
@@ -52,13 +59,13 @@ namespace Ecom_Onboarding.Controllers
         [Route("{Name}")]
         [ProducesResponseType(typeof(GameDTO), 200)]
         [ProducesResponseType(typeof(string), 400)]
-        public async Task<ActionResult> GetByTitleAsync([FromRoute] string Name)
+        public async Task<ActionResult> GetByNameAsync([FromRoute] string Name)
         {
-            var game = await _unitOfWork.GameRepository.GetAll().Where(b => b.Name == Name).FirstOrDefaultAsync();
-            if (game != null)
+            Game result = await _gameService.GetGameByNameAsync(Name);
+            if (result != null)
             {
-                var gameDTO = _mapper.Map<GameDTO>(game);
-                return new OkObjectResult(gameDTO);
+                GameDTO mappedResult = _mapper.Map<GameDTO>(result);
+                return new OkObjectResult(mappedResult);
             }
             return new NotFoundResult();
         }
@@ -75,15 +82,17 @@ namespace Ecom_Onboarding.Controllers
         [ProducesResponseType(typeof(string), 400)]
         public async Task<ActionResult> CreateAsync([FromBody] GameDTO gameDTO)
         {
-            var isExist = _unitOfWork.GameRepository.GetAll().Where(x => x.Name == gameDTO.Name).Any();
-            if (!isExist)
+            try
             {
-                var game = _mapper.Map<Game>(gameDTO);
-                await _unitOfWork.GameRepository.AddAsync(game);
-                await _unitOfWork.SaveAsync();
+                Game game = _mapper.Map<Game>(gameDTO);
+                await _gameService.CreateGameAsync(game);
                 return new OkResult();
             }
-            return new BadRequestResult();
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return new BadRequestResult();
+            }
         }
 
         /// <summary>
@@ -96,8 +105,24 @@ namespace Ecom_Onboarding.Controllers
         [ProducesResponseType(typeof(GameDTO), 200)]
         public ActionResult Delete([FromRoute] string Name)
         {
-            _unitOfWork.GameRepository.Delete(x => x.Name == Name);
+            _gameService.DeleteGame(Name);
             return new OkResult();
         }
+
+        /// <summary>
+        /// Update game 
+        /// </summary>
+        /// <param Name="Name">game data.</param>
+        /// <response code="200">Request ok.</response>
+        [HttpPut]
+        [Route("")]
+        [ProducesResponseType(typeof(GameDTO), 200)]
+        public ActionResult Update([FromBody] GameDTO gameDTO)
+        {
+            Model.Game game = _mapper.Map<Model.Game>(gameDTO);
+            _gameService.UpdateGame(game);
+            return new OkResult();
+        }
+
     }
 }

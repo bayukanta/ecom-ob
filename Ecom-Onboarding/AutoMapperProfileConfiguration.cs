@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Ecom_Onboarding.DTO;
-using Ecom_Onboarding.Models;
+using Ecom_Onboarding.DAL.Models;
 
 
 namespace Ecom_Onboarding

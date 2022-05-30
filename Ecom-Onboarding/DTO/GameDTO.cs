@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace Ecom_Onboarding.DTO
 {
@@ -6,6 +7,8 @@ namespace Ecom_Onboarding.DTO
     {
         public string Name { get; set; }
         public string Genre { get; set; }
-        public string Publisher { get; set; }
+
+        [JsonIgnore]
+        public PublisherDTO Publisher { get; set; }
     }
 }

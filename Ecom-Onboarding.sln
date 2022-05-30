@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecom-Onboarding", "Ecom-Onboarding\Ecom-Onboarding.csproj", "{CA106E1B-8366-43B0-9873-29034155FD74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecom-Onboarding", "Ecom-Onboarding\Ecom-Onboarding.csproj", "{CA106E1B-8366-43B0-9873-29034155FD74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecom-Onboarding.BLL", "Ecom-Onboarding.BLL\Ecom-Onboarding.BLL.csproj", "{164E6ED0-CF65-459B-91CD-CF991F95E2B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecom-onboarding.DAL", "Ecom-onboarding.DAL\Ecom-onboarding.DAL.csproj", "{D3AA544C-24C5-4772-B5C1-2CFF0D6E66CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{CA106E1B-8366-43B0-9873-29034155FD74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA106E1B-8366-43B0-9873-29034155FD74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA106E1B-8366-43B0-9873-29034155FD74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164E6ED0-CF65-459B-91CD-CF991F95E2B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164E6ED0-CF65-459B-91CD-CF991F95E2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164E6ED0-CF65-459B-91CD-CF991F95E2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164E6ED0-CF65-459B-91CD-CF991F95E2B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3AA544C-24C5-4772-B5C1-2CFF0D6E66CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3AA544C-24C5-4772-B5C1-2CFF0D6E66CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3AA544C-24C5-4772-B5C1-2CFF0D6E66CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3AA544C-24C5-4772-B5C1-2CFF0D6E66CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

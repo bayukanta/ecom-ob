@@ -93,3 +93,7 @@ D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\ru
 D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Ecom-Onboarding.BLL.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Ecom-onboarding.DAL.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Ecom-Onboarding.BLL.pdb
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Ecom-onboarding.DAL.pdb

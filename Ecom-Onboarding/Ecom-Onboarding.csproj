@@ -23,7 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Ecom-Onboarding.BLL\Ecom-Onboarding.BLL.csproj" />
+    <ProjectReference Include="..\Ecom-onboarding.DAL\Ecom-onboarding.DAL.csproj" />
   </ItemGroup>
 
 

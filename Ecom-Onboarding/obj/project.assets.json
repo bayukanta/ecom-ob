@@ -1637,6 +1637,39 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Ecom-Onboarding.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper": "11.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "Ecom-onboarding.DAL": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8"
+        },
+        "compile": {
+          "bin/placeholder/Ecom-Onboarding.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ecom-Onboarding.BLL.dll": {}
+        }
+      },
+      "Ecom-onboarding.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper": "11.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8"
+        },
+        "compile": {
+          "bin/placeholder/Ecom-onboarding.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ecom-onboarding.DAL.dll": {}
+        }
       }
     }
   },
@@ -6091,12 +6124,24 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Ecom-Onboarding.BLL/1.0.0": {
+      "type": "project",
+      "path": "../Ecom-Onboarding.BLL/Ecom-Onboarding.BLL.csproj",
+      "msbuildProject": "../Ecom-Onboarding.BLL/Ecom-Onboarding.BLL.csproj"
+    },
+    "Ecom-onboarding.DAL/1.0.0": {
+      "type": "project",
+      "path": "../Ecom-onboarding.DAL/Ecom-onboarding.DAL.csproj",
+      "msbuildProject": "../Ecom-onboarding.DAL/Ecom-onboarding.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper >= 11.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
+      "Ecom-Onboarding.BLL >= 1.0.0",
+      "Ecom-onboarding.DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.8",
@@ -6130,7 +6175,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-Onboarding.BLL\\Ecom-Onboarding.BLL.csproj": {
+              "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-Onboarding.BLL\\Ecom-Onboarding.BLL.csproj"
+            },
+            "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj": {
+              "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
