@@ -1529,7 +1529,7 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Ecom-onboarding.DAL/1.0.0": {
+      "Ecom-Onboarding.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
@@ -1539,10 +1539,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8"
         },
         "compile": {
-          "bin/placeholder/Ecom-onboarding.DAL.dll": {}
+          "bin/placeholder/Ecom-Onboarding.DAL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Ecom-onboarding.DAL.dll": {}
+          "bin/placeholder/Ecom-Onboarding.DAL.dll": {}
         }
       }
     }
@@ -5819,17 +5819,17 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Ecom-onboarding.DAL/1.0.0": {
+    "Ecom-Onboarding.DAL/1.0.0": {
       "type": "project",
-      "path": "../Ecom-onboarding.DAL/Ecom-onboarding.DAL.csproj",
-      "msbuildProject": "../Ecom-onboarding.DAL/Ecom-onboarding.DAL.csproj"
+      "path": "../Ecom-onboarding.DAL/Ecom-Onboarding.DAL.csproj",
+      "msbuildProject": "../Ecom-onboarding.DAL/Ecom-Onboarding.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper >= 11.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
-      "Ecom-onboarding.DAL >= 1.0.0",
+      "Ecom-Onboarding.DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.8"
     ]
@@ -5861,8 +5861,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj": {
-              "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj"
+            "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-Onboarding.DAL.csproj": {
+              "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-Onboarding.DAL.csproj"
             }
           }
         }

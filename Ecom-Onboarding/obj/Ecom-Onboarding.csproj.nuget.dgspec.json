@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj": {
-                "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj"
+              "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-Onboarding.DAL.csproj": {
+                "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-Onboarding.DAL.csproj"
               }
             }
           }
@@ -80,12 +80,12 @@
         }
       }
     },
-    "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj": {
+    "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-Onboarding.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj",
-        "projectName": "Ecom-onboarding.DAL",
-        "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj",
+        "projectUniqueName": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-Onboarding.DAL.csproj",
+        "projectName": "Ecom-Onboarding.DAL",
+        "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-Onboarding.DAL.csproj",
         "packagesPath": "C:\\Users\\Bayukanta\\.nuget\\packages\\",
         "outputPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\obj\\",
         "projectStyle": "PackageReference",
@@ -179,8 +179,8 @@
               "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-Onboarding.BLL\\Ecom-Onboarding.BLL.csproj": {
                 "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-Onboarding.BLL\\Ecom-Onboarding.BLL.csproj"
               },
-              "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj": {
-                "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj"
+              "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-Onboarding.DAL.csproj": {
+                "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-Onboarding.DAL.csproj"
               }
             }
           }

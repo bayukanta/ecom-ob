@@ -1644,7 +1644,7 @@
         "dependencies": {
           "AutoMapper": "11.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
-          "Ecom-onboarding.DAL": "1.0.0",
+          "Ecom-Onboarding.DAL": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8"
         },
@@ -1655,7 +1655,7 @@
           "bin/placeholder/Ecom-Onboarding.BLL.dll": {}
         }
       },
-      "Ecom-onboarding.DAL/1.0.0": {
+      "Ecom-Onboarding.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
@@ -1665,10 +1665,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8"
         },
         "compile": {
-          "bin/placeholder/Ecom-onboarding.DAL.dll": {}
+          "bin/placeholder/Ecom-Onboarding.DAL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Ecom-onboarding.DAL.dll": {}
+          "bin/placeholder/Ecom-Onboarding.DAL.dll": {}
         }
       }
     }
@@ -6130,10 +6130,10 @@
       "path": "../Ecom-Onboarding.BLL/Ecom-Onboarding.BLL.csproj",
       "msbuildProject": "../Ecom-Onboarding.BLL/Ecom-Onboarding.BLL.csproj"
     },
-    "Ecom-onboarding.DAL/1.0.0": {
+    "Ecom-Onboarding.DAL/1.0.0": {
       "type": "project",
-      "path": "../Ecom-onboarding.DAL/Ecom-onboarding.DAL.csproj",
-      "msbuildProject": "../Ecom-onboarding.DAL/Ecom-onboarding.DAL.csproj"
+      "path": "../Ecom-onboarding.DAL/Ecom-Onboarding.DAL.csproj",
+      "msbuildProject": "../Ecom-onboarding.DAL/Ecom-Onboarding.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6141,7 +6141,7 @@
       "AutoMapper >= 11.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
       "Ecom-Onboarding.BLL >= 1.0.0",
-      "Ecom-onboarding.DAL >= 1.0.0",
+      "Ecom-Onboarding.DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.8",
@@ -6179,8 +6179,8 @@
             "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-Onboarding.BLL\\Ecom-Onboarding.BLL.csproj": {
               "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-Onboarding.BLL\\Ecom-Onboarding.BLL.csproj"
             },
-            "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj": {
-              "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-onboarding.DAL.csproj"
+            "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-Onboarding.DAL.csproj": {
+              "projectPath": "D:\\Onboarding\\Ecom-Onboarding\\ecom-ob\\Ecom-onboarding.DAL\\Ecom-Onboarding.DAL.csproj"
             }
           }
         }

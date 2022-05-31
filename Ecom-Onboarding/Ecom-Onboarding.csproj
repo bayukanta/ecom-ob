@@ -24,7 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Ecom-Onboarding.BLL\Ecom-Onboarding.BLL.csproj" />
-    <ProjectReference Include="..\Ecom-onboarding.DAL\Ecom-onboarding.DAL.csproj" />
+    <ProjectReference Include="..\Ecom-onboarding.DAL\Ecom-Onboarding.DAL.csproj" />
   </ItemGroup>
 
 

@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Ecom-onboarding.DAL/1.0.0": {
+      "Ecom-Onboarding.DAL/1.0.0": {
         "dependencies": {
           "AutoMapper": "11.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
@@ -14,7 +14,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8"
         },
         "runtime": {
-          "Ecom-onboarding.DAL.dll": {}
+          "Ecom-Onboarding.DAL.dll": {}
         }
       },
       "AutoMapper/11.0.1": {
@@ -1094,7 +1094,7 @@
     }
   },
   "libraries": {
-    "Ecom-onboarding.DAL/1.0.0": {
+    "Ecom-Onboarding.DAL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

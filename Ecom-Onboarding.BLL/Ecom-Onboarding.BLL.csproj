@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ecom-onboarding.DAL\Ecom-onboarding.DAL.csproj" />
+    <ProjectReference Include="..\Ecom-onboarding.DAL\Ecom-Onboarding.DAL.csproj" />
   </ItemGroup>
 
 </Project>
