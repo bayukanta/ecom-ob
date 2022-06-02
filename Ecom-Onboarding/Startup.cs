@@ -51,10 +51,13 @@ namespace Ecom_Onboarding
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IRedisService, RedisService>();
 
-            //services.AddTransient<LogTimeJob>();
-            //services.AddSingleton<QuartzJobFactory>();
+            services.AddHostedService<GameMessageListener>();
 
-            //services.AddHostedService<ISchedulerService, SchedulerService>();
+
+            services.AddTransient<LogTimeJob>();
+            services.AddTransient<QuartzJobFactory>();
+
+            services.AddSingleton<ISchedulerService, SchedulerService>();
 
         }
 
@@ -83,6 +86,10 @@ namespace Ecom_Onboarding
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tutorial Net Core v1");
             });
+
+            var schedulerService = app.ApplicationServices.GetRequiredService<ISchedulerService>();
+            schedulerService.Initialize();
+            schedulerService.Start();
         }
     }
 }

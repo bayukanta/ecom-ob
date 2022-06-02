@@ -48,6 +48,14 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "Azure.Messaging.EventHubs": {
+              "target": "Package",
+              "version": "[5.7.0, )"
+            },
+            "Azure.Messaging.EventHubs.Processor": {
+              "target": "Package",
+              "version": "[5.7.0, )"
+            },
             "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
               "version": "[2.2.7, )"

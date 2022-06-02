@@ -142,3 +142,14 @@ D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Sy
 D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
 D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Azure.Core.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Azure.Core.Amqp.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Azure.Messaging.EventHubs.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Azure.Messaging.EventHubs.Processor.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Azure.Storage.Blobs.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Azure.Storage.Common.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Microsoft.Azure.Amqp.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\System.IO.Hashing.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\System.Memory.Data.dll
+D:\Onboarding\Ecom-Onboarding\ecom-ob\Ecom-Onboarding\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
