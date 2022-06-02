@@ -14,6 +14,9 @@ using Microsoft.OpenApi.Models;
 using Ecom_Onboarding.DAL.Interface;
 using Ecom_Onboarding.DAL.Repository;
 using Ecom_Onboarding.DAL.Models;
+using Ecom_Onboarding.BLL.Services;
+using Ecom_Onboarding.DAL.Job;
+using Ecom_Onboarding.BLL;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -46,6 +49,13 @@ namespace Ecom_Onboarding
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Tutorial Net Core", Version = "v1" });
             });
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IRedisService, RedisService>();
+
+            //services.AddTransient<LogTimeJob>();
+            //services.AddSingleton<QuartzJobFactory>();
+
+            //services.AddHostedService<ISchedulerService, SchedulerService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

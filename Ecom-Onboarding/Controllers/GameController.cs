@@ -26,11 +26,11 @@ namespace Ecom_Onboarding.Controllers
         private readonly ILogger<GameController> _logger;
 
 
-        public GameController(ILogger<GameController> logger, IUnitOfWork uow, IConfiguration configuration, IMapper mapper)
+        public GameController(ILogger<GameController> logger, IUnitOfWork uow, IConfiguration configuration, IMapper mapper, IRedisService redis)
         {
             _logger = logger;
             _mapper = mapper;
-            _gameService ??= new GameService(uow, configuration);
+            _gameService ??= new GameService(uow, configuration, redis);
         }
 
         /// <summary>

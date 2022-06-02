@@ -14,11 +14,13 @@ namespace Ecom_Onboarding.BLL.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _config;
+        private IRedisService _redis;
 
-        public GameService(IUnitOfWork unitOfWork, IConfiguration config)
+        public GameService(IUnitOfWork unitOfWork, IConfiguration config, IRedisService redis)
         {
             _unitOfWork = unitOfWork;
             _config = config;
+            _redis = redis;
         }
 
         public async Task<List<Game>> GetAllGameAsync()
@@ -28,9 +30,15 @@ namespace Ecom_Onboarding.BLL.Services
 
         public async Task<Game> GetGameByNameAsync(string Name)
         {
-            return await _unitOfWork.GameRepository
+            var game = await _redis.GetAsync<Game>($"game_gameName:{Name}");
+            if (game == null)
+            {
+                game = await _unitOfWork.GameRepository
                 .GetAll()
                 .FirstOrDefaultAsync(b => b.Name == Name);
+                await _redis.SaveAsync($"game_gameName:{Name}", game);
+            }
+            return game;
         }
 
         public async Task CreateGameAsync(Game game)
