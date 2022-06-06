@@ -1,0 +1,13 @@
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.json
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.dev.json
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.AssemblyReference.cache
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\obj\Debug\netcoreapp3.1\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+D:\Onboarding\Ecom-Onboarding-Auth\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache

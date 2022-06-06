@@ -1,0 +1,13 @@
+D:\Onboarding\Ecom-Onboarding-Auth\External\bin\Debug\netcoreapp3.1\External.deps.json
+D:\Onboarding\Ecom-Onboarding-Auth\External\bin\Debug\netcoreapp3.1\External.dll
+D:\Onboarding\Ecom-Onboarding-Auth\External\bin\Debug\netcoreapp3.1\External.pdb
+D:\Onboarding\Ecom-Onboarding-Auth\External\bin\Debug\netcoreapp3.1\DAL.dll
+D:\Onboarding\Ecom-Onboarding-Auth\External\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\Onboarding\Ecom-Onboarding-Auth\External\obj\Debug\netcoreapp3.1\External.csproj.AssemblyReference.cache
+D:\Onboarding\Ecom-Onboarding-Auth\External\obj\Debug\netcoreapp3.1\External.GeneratedMSBuildEditorConfig.editorconfig
+D:\Onboarding\Ecom-Onboarding-Auth\External\obj\Debug\netcoreapp3.1\External.AssemblyInfoInputs.cache
+D:\Onboarding\Ecom-Onboarding-Auth\External\obj\Debug\netcoreapp3.1\External.AssemblyInfo.cs
+D:\Onboarding\Ecom-Onboarding-Auth\External\obj\Debug\netcoreapp3.1\External.csproj.CoreCompileInputs.cache
+D:\Onboarding\Ecom-Onboarding-Auth\External\obj\Debug\netcoreapp3.1\External.csproj.CopyComplete
+D:\Onboarding\Ecom-Onboarding-Auth\External\obj\Debug\netcoreapp3.1\External.dll
+D:\Onboarding\Ecom-Onboarding-Auth\External\obj\Debug\netcoreapp3.1\External.pdb
