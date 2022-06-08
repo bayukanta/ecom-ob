@@ -32,7 +32,7 @@ namespace Ecom_Onboarding.DAL.Repository
             Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<T> entry = await dbSet.AddAsync(entity, cancellationToken);
             return entry.Entity;
         }
-
+        
         public void AddRange(IEnumerable<T> entities)
         {
             dbSet.AddRange(entities);

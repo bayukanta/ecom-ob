@@ -18,3 +18,9 @@ D:\Onboarding\Ecom-Onboarding\Ecom-onboarding.DAL\obj\Debug\netcoreapp3.1\Ecom-O
 D:\Onboarding\Ecom-Onboarding\Ecom-onboarding.DAL\obj\Debug\netcoreapp3.1\Ecom-Onboarding.DAL.csproj.CoreCompileInputs.cache
 D:\Onboarding\Ecom-Onboarding\Ecom-onboarding.DAL\obj\Debug\netcoreapp3.1\Ecom-Onboarding.DAL.dll
 D:\Onboarding\Ecom-Onboarding\Ecom-onboarding.DAL\obj\Debug\netcoreapp3.1\Ecom-Onboarding.DAL.pdb
+D:\Onboarding\Ecom-Onboarding\Ecom-onboarding.DAL\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-onboarding.DAL\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-onboarding.DAL\bin\Debug\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-onboarding.DAL\bin\Debug\netcoreapp3.1\Ecom-Onboarding.DAL.runtimeconfig.json
+D:\Onboarding\Ecom-Onboarding\Ecom-onboarding.DAL\bin\Debug\netcoreapp3.1\Ecom-Onboarding.DAL.runtimeconfig.dev.json
+D:\Onboarding\Ecom-Onboarding\Ecom-onboarding.DAL\obj\Debug\netcoreapp3.1\Ecom-Onboarding.DAL.genruntimeconfig.cache

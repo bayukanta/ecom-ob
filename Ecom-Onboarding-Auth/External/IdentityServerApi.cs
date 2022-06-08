@@ -37,7 +37,7 @@ namespace External
         {
             DiscoveryDocumentRequest discoReq = new DiscoveryDocumentRequest()
             {
-                Address = _config.GetValue<string>("AuthorizationServer:Address"),
+                Address = "https://localhost:5001",
                 Policy = new DiscoveryPolicy()
                 {
                     RequireHttps = false,

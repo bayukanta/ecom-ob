@@ -274,3 +274,17 @@ D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Ecom-Onboa
 D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Ecom-Onboarding.DAL.dll
 D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Ecom-Onboarding.BLL.pdb
 D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Ecom-Onboarding.DAL.pdb
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Castle.Core.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\FluentAssertions.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\MockQueryable.Core.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\MockQueryable.EntityFrameworkCore.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\MockQueryable.Moq.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\Moq.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\xunit.abstractions.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\xunit.assert.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\xunit.core.dll
+D:\Onboarding\Ecom-Onboarding\Ecom-Onboarding\bin\Debug\netcoreapp3.1\xunit.execution.dotnet.dll

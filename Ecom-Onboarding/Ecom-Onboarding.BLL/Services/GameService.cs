@@ -19,17 +19,17 @@ namespace Ecom_Onboarding.BLL.Services
     public class GameService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IConfiguration _config;
+        //private readonly IConfiguration _config;
         private IRedisService _redis;
-        private readonly IGameMessageSenderFactory _msgSernderFactory;
+        //private readonly IGameMessageSenderFactory _msgSernderFactory;
 
 
-        public GameService(IUnitOfWork unitOfWork, IConfiguration config, IRedisService redis, IGameMessageSenderFactory msgSernderFactory)
+        public GameService(IUnitOfWork unitOfWork, IRedisService redis) //,IGameMessageSenderFactory msgSernderFactory)
         {
             _unitOfWork = unitOfWork;
-            _config = config;
+            //_config = config;
             _redis = redis;
-            _msgSernderFactory = msgSernderFactory;
+            //_msgSernderFactory = msgSernderFactory;
 
         }
 
@@ -56,10 +56,10 @@ namespace Ecom_Onboarding.BLL.Services
             bool isExist = _unitOfWork.GameRepository.GetAll().Where(x => x.Name == game.Name).Any();
             if (!isExist)
             {
-                _unitOfWork.GameRepository.Add(game);
+                await _unitOfWork.GameRepository.AddAsync(game);
                 await _unitOfWork.SaveAsync();
 
-                await SendGameToEventHub(game);
+                //await SendGameToEventHub(game);
             }
             else
             {
@@ -67,42 +67,45 @@ namespace Ecom_Onboarding.BLL.Services
             }
         }
 
-        private async Task SendGameToEventHub(Game game)
-        {
-            string topic = _config.GetValue<string>("EventHub:EventHubNameTest");
+        //private async Task SendGameToEventHub(Game game)
+        //{
+        //    string topic = _config.GetValue<string>("EventHub:EventHubNameTest");
 
-            //create event hub producer
-            using IGameMessageSender message = _msgSernderFactory.Create(_config, topic);
+        //    //create event hub producer
+        //    using IGameMessageSender message = _msgSernderFactory.Create(_config, topic);
 
-            //create batch
-            await message.CreateEventBatchAsync();
+        //    //create batch
+        //    await message.CreateEventBatchAsync();
 
-            //add message, ini bisa banyak sekaligus
-            message.AddMessage(game);
+        //    //add message, ini bisa banyak sekaligus
+        //    message.AddMessage(game);
 
-            //send message
-            await message.SendMessage();
-        }
+        //    //send message
+        //    await message.SendMessage();
+        //}
 
-        public void DeleteGame(string Name)
+        public async Task DeleteGameAsync(string Name)
         {
             bool isExist = _unitOfWork.GameRepository.GetAll().Where(x => x.Name == Name).Any();
             if (isExist)
             {
                 _unitOfWork.GameRepository.Delete(x => x.Name == Name);
-                _unitOfWork.Save();
-
+                await _unitOfWork.SaveAsync();
             }
            
         }
 
-        public void UpdateGame(Game game)
+        public async Task UpdateGameAsync(Game game)
         {
             bool isExist = _unitOfWork.GameRepository.GetAll().Where(x => x.Name == game.Name).Any();
             if(isExist)
             {
                 _unitOfWork.GameRepository.Edit(game);
-                _unitOfWork.Save();
+                await _unitOfWork.SaveAsync();
+            }
+            else
+            {
+                throw new Exception($"Game with name {game.Name} not exist");
             }
         }
 

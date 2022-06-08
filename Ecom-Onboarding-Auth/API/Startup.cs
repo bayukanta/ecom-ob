@@ -3,6 +3,7 @@ using External;
 using IdentityServer4;
 using IdentityServer4.Configuration;
 using IdentityServer4.EntityFramework.Stores;
+using Microsoft.IdentityModel.Logging;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OAuth.Claims;
 using Microsoft.AspNetCore.Authorization;
@@ -37,16 +38,16 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            //X509Certificate2 cert = new X509Certificate2("example.pfx", Configuration.GetValue<string>("Certificate:Password"));
+            X509Certificate2 cert = new X509Certificate2("example.pfx", Configuration.GetValue<string>("Certificate:Password"));
             string migrationsAssembly = "DAL";
 
-            
+            IdentityModelEventSource.ShowPII = true;
             services.AddIdentityServer(options =>
             {
                 options.Authentication.CookieAuthenticationScheme = "none";
                 options.IssuerUri = Configuration.GetValue<string>("AuthorizationServer:Address");
             })
-            //.AddSigningCredential(cert)
+            .AddSigningCredential(cert)
             .AddResourceOwnerValidator<ResourceOwnerPasswordValidatorService>()
             .AddProfileService<UserProfileService>()
             .AddProfileService<UserProfileService>()
@@ -81,7 +82,8 @@ namespace API
                 options.RequireHttpsMetadata = false;
             })
             .AddCookie("none");
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(x =>
+ x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddDbContext<OnBoardingAuthDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc();
             services.AddHttpContextAccessor();
@@ -166,7 +168,8 @@ namespace API
             });
 
             //initialize identity server, firsttime only after creating migration for ConfigurationDb & PersistedGrantDb
-            InitConfig.InitializeDatabase(app);
+            //InitConfig.InitializeDatabase(app);
+            //SeedData.EnsureSeedData(Configuration.GetConnectionString("DefaultConnection"));
         }
     }
 }

@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecom-Onboarding.BLL", "Ecom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecom-Onboarding.DAL", "Ecom-onboarding.DAL\Ecom-Onboarding.DAL.csproj", "{D3AA544C-24C5-4772-B5C1-2CFF0D6E66CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecom-Onboarding.BLL.Test", "Ecom-Onboarding.BLL.Test\Ecom-Onboarding.BLL.Test.csproj", "{465F4E87-0A77-4228-B813-B5CA52197B69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D3AA544C-24C5-4772-B5C1-2CFF0D6E66CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3AA544C-24C5-4772-B5C1-2CFF0D6E66CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3AA544C-24C5-4772-B5C1-2CFF0D6E66CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{465F4E87-0A77-4228-B813-B5CA52197B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{465F4E87-0A77-4228-B813-B5CA52197B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{465F4E87-0A77-4228-B813-B5CA52197B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{465F4E87-0A77-4228-B813-B5CA52197B69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

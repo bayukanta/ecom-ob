@@ -60,9 +60,21 @@
               "target": "Package",
               "version": "[5.7.0, )"
             },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
             "Microsoft.ApplicationInsights.AspNetCore": {
               "target": "Package",
               "version": "[2.20.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.25, )"
             },
             "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
@@ -84,6 +96,14 @@
               "target": "Package",
               "version": "[6.0.1, )"
             },
+            "MockQueryable.Moq": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
             "Quartz": {
               "target": "Package",
               "version": "[3.4.0, )"
@@ -95,6 +115,16 @@
             "StackExchange.Redis": {
               "target": "Package",
               "version": "[2.5.61, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
             }
           },
           "imports": [
@@ -168,9 +198,21 @@
               "target": "Package",
               "version": "[5.7.0, )"
             },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
             "Microsoft.ApplicationInsights.AspNetCore": {
               "target": "Package",
               "version": "[2.20.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.25, )"
             },
             "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
@@ -192,6 +234,14 @@
               "target": "Package",
               "version": "[6.0.1, )"
             },
+            "MockQueryable.Moq": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
             "Quartz": {
               "target": "Package",
               "version": "[3.4.0, )"
@@ -203,6 +253,16 @@
             "StackExchange.Redis": {
               "target": "Package",
               "version": "[2.5.61, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
             }
           },
           "imports": [

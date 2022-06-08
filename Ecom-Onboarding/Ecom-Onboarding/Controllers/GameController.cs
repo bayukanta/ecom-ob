@@ -17,6 +17,7 @@ using Ecom_onboarding.DAL.Repository;
 using Ecom_Onboarding.BLL.Redis;
 using Ecom_Onboarding.BLL.Eventhub;
 using Microsoft.AspNetCore.Authorization;
+using Ecom_Onboarding.API.Security;
 
 
 
@@ -31,11 +32,11 @@ namespace Ecom_Onboarding.Controllers
         private readonly ILogger<GameController> _logger;
 
 
-        public GameController(ILogger<GameController> logger, IUnitOfWork uow, IConfiguration configuration, IMapper mapper, IRedisService redis, IGameMessageSenderFactory msgSernderFactory)
+        public GameController(ILogger<GameController> logger, IUnitOfWork uow, IConfiguration configuration, IMapper mapper, IRedisService redis) //, IGameMessageSenderFactory msgSernderFactory)
         {
             _logger = logger;
             _mapper = mapper;
-            _gameService ??= new GameService(uow, configuration, redis, msgSernderFactory);
+            _gameService ??= new GameService(uow, redis); //msgSernderFactory);
         }
 
         /// <summary>
@@ -64,6 +65,7 @@ namespace Ecom_Onboarding.Controllers
         [Route("{Name}")]
         [ProducesResponseType(typeof(GameDTO), 200)]
         [ProducesResponseType(typeof(string), 400)]
+        //[Authorize]
         public async Task<ActionResult> GetByNameAsync([FromRoute] string Name)
         {
             Game result = await _gameService.GetGameByNameAsync(Name);
@@ -85,7 +87,7 @@ namespace Ecom_Onboarding.Controllers
         [Route("")]
         [ProducesResponseType(typeof(string), 200)]
         [ProducesResponseType(typeof(string), 400)]
-        [Authorize]
+        //[AuthorizedByRole("Admin")]
         public async Task<ActionResult> CreateAsync([FromBody] GameDTO gameDTO)
         {
             try
@@ -109,9 +111,10 @@ namespace Ecom_Onboarding.Controllers
         [HttpDelete]
         [Route("{Name}")]
         [ProducesResponseType(typeof(GameDTO), 200)]
-        public ActionResult Delete([FromRoute] string Name)
+        //[AuthorizedByRole("Admin")]
+        public async Task<ActionResult> Delete([FromRoute] string Name)
         {
-            _gameService.DeleteGame(Name);
+            await _gameService.DeleteGameAsync(Name);
             return new OkResult();
         }
 
@@ -123,10 +126,10 @@ namespace Ecom_Onboarding.Controllers
         [HttpPut]
         [Route("")]
         [ProducesResponseType(typeof(GameDTO), 200)]
-        public ActionResult Update([FromBody] GameDTO gameDTO)
+        public async Task<ActionResult> Update([FromBody] GameDTO gameDTO)
         {
             Model.Game game = _mapper.Map<Model.Game>(gameDTO);
-            _gameService.UpdateGame(game);
+            await _gameService.UpdateGameAsync(game);
             return new OkResult();
         }
 
