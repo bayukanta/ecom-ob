@@ -86,7 +86,7 @@ namespace Ecom_Onboarding.BLL.Test
 
             mockRedis
                 .Setup(x => x.GetAsync<Game>(It.Is<string>(x => x.Equals("game_gameName:stringa"))))
-                .ReturnsAsync(games.FirstOrDefault(x => x.Id == Guid.Parse("stringa")))
+                .ReturnsAsync(games.FirstOrDefault(x => x.Name == "stringa"))
                 .Verifiable();
 
             mockRedis
@@ -158,7 +158,7 @@ namespace Ecom_Onboarding.BLL.Test
         }
 
         [Theory]
-        [InlineData("Name")]
+        [InlineData("stringa")]
         public async Task DeleteGame_Success(string name)
         {
             //arrange

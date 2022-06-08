@@ -96,6 +96,10 @@
               "target": "Package",
               "version": "[6.0.1, )"
             },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.2.0, )"
+            },
             "MockQueryable.Moq": {
               "target": "Package",
               "version": "[5.0.1, )"
@@ -233,6 +237,10 @@
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[6.0.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.2.0, )"
             },
             "MockQueryable.Moq": {
               "target": "Package",
